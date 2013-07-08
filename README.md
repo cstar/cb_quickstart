@@ -13,7 +13,7 @@ cd $APP
 rm -Rf ./.git
 make PROJECT=$APP
 ```
-Note : the APP variable must be a valid erlang
+Note : the APP variable must be a valid erlang term. (Roughly : downcase characters and '_', no digits first)
 
 Warning : the last command will display the following error message :
 
@@ -27,3 +27,6 @@ ERROR: One or more files already exist on disk and were not generated:
 Please ignore it.
 
 Code away !
+-----------
+
+Visit the [Chicago Boss website](http://www.chicagoboss.org) for more information.
