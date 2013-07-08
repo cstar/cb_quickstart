@@ -10,7 +10,7 @@ Clone the project and do the rebar dance
 APP=<your app name>
 git clone --depth=1 https://github.com/cstar/cb_quickstart.git $APP
 cd $APP
-rm -Rf ./.git
+# rm -Rf ./.git #this command is commented, because I don't want to be held responsible for deleting your git history
 make PROJECT=$APP
 ```
 Note : the APP variable must be a valid erlang term. (Roughly : downcase characters and '_', no digits first)
