@@ -26,6 +26,17 @@ ERROR: One or more files already exist on disk and were not generated:
 
 Please ignore it.
 
+cb_admin
+--------
+`cb_admin` is fetched as a dependency. To install it, add the `cb_admin` to your root application as specified in the README.
+
+Note
+----
+I've had to modify the cb_admin and ChicagoBoss source code a tiny bit to enable CB apps to work from the `deps` directory.
+So this project is currently pulling my forks instead of the canonical repository. There is a pull request proposing a fix.
+
+If the fix or a similar fix is accepted upstream, I will point rebar to the canonical repos.
+
 Code away !
 -----------
 
