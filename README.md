@@ -9,7 +9,7 @@ Easy muffin, copy paste the following:
 APP=<your app name>
 mkdir $APP
 cd $APP
-curl -L https://github.com/cstar/cb_quickstart/archive/v1.0.tar.gz | tar xzf - -C . --strip-components=1
+curl -L https://github.com/cstar/cb_quickstart/archive/v1.1.tar.gz | tar xzf - -C . --strip-components=1
 make PROJECT=$APP
 ```
 Note : the APP variable must be a valid erlang term. (Roughly : downcase characters and '_', no digits first)
@@ -27,7 +27,24 @@ Please ignore it.
 
 cb_admin
 --------
-`cb_admin` is fetched as a dependency. To install it, add the `cb_admin` to your root application as specified in the [README](https://github.com/evanmiller/cb_admin#installation-with-an-existing-cb-server).
+`cb_admin` is fetched as a dependency. To install :
+Add to rebar.config 
+```erlang
+{deps, [
+  % ...
+  {cb_admin, ".*", {git, "git://github.com/evanmiller/cb_admin.git", "HEAD"}}
+]}.
+```
+
+And add something like this to your boss.config:
+    [{boss, [
+        {applications, [cb_admin, ...]},
+        ...
+    ]},
+    {cb_admin, [
+        {allow_ip_blocks, ["127.0.0.1"]},
+        {base_url, "/admin"}
+    ]}].
 
 Code away !
 -----------
