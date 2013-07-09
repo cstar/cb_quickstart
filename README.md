@@ -3,8 +3,7 @@ Chicago Boss quickstart
 
 Howto
 -----
-
-Clone the project and do the rebar dance
+Easy muffin, copy paste the following:
 
 ```console
 APP=<your app name>
