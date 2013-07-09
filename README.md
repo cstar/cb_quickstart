@@ -27,7 +27,7 @@ Please ignore it.
 
 cb_admin
 --------
-`cb_admin` is fetched as a dependency. To install it, add the `cb_admin` to your root application as specified in the README.
+`cb_admin` is fetched as a dependency. To install it, add the `cb_admin` to your root application as specified in the [README](https://github.com/evanmiller/cb_admin#installation-with-an-existing-cb-server).
 
 Code away !
 -----------
